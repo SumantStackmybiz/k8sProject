@@ -4,7 +4,7 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile
-    image: ${REP_ID}:${TAG}
+    image: ${RE_ID}:${TAG}
     restart: always
     ports:
       - "8080:8080"
