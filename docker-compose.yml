@@ -1,0 +1,13 @@
+version: '3'
+networks:
+  app-network:
+    driver: 'bridge'
+services:
+
+  web:
+    image: 797538814288.dkr.ecr.ap-south-1.amazonaws.com/test1:v${TAG}
+    ports:
+      - "80:80"
+    networks:
+      - app-network
+
