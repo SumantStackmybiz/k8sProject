@@ -1,13 +1,12 @@
-version: '3'
-networks:
-  app-network:
-    driver: 'bridge'
+version: "3.1"
 services:
-
-  web:
-    image: 797538814288.dkr.ecr.ap-south-1.amazonaws.com/test1:v${TAG}
+  rapido-bid:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: ${REP_ID}:${TAG}
+    restart: always
     ports:
-      - "80:80"
+      - "8080:8080"
     networks:
-      - app-network
-
+      - bid-network
